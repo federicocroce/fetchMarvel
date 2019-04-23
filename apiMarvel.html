@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./apiMarvel.js"></script>
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+        }
+
+        .main {
+            padding: 10px;
+        }
+
+        li {
+            list-style-type: none;
+            background: rgb(194, 194, 194);
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        li:hover {
+            background: rgb(54, 54, 54);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="filter-container">
+            <input id="characterName" type="text">
+            <button onclick="filterCharacterByName()">Filtrar Personajes</button>
+        </div>
+
+        <div class="dynamic-container">
+            <ul id="list"></ul>
+            <p id="spinner">Cargando...</p>
+            <p id="emptyResult">No se encontraron coincidencias</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
